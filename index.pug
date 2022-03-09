@@ -1,0 +1,210 @@
+doctype
+html 
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="./css/bootstrap.min.css")
+    link(rel="stylesheet" href="./css/all.min.css")
+    link(rel="stylesheet" href="./css/style.css")
+    title New Template 17
+  body
+    // start navbar
+    nav.navbar.navbar-expand-lg.sticky-top
+      .container
+        a.navbar-brand(href='#')|
+          | 
+          img(src="./imgs/logo.png")
+        button.navbar-toggler.fs-1.text-white(type='button' data-bs-toggle='collapse' data-bs-target='#main' aria-controls='main' aria-expanded='false' aria-label='Toggle navigation')
+          |
+          i(class="fa-solid fa-bars")
+        .collapse.navbar-collapse#main
+          ul.navbar-nav.ms-auto.mb-2.mb-lg-0.mt-2.mt-lg-0
+            li.nav-item
+              a.nav-link.active(class="p-lg-3 text-white" aria-current='page' href='#') Home
+            - var liItems = ["Services", "About", "Portfolio", "Contact"]
+            each item in liItems
+              li.nav-item
+                a.nav-link(href='#' class="p-lg-3" class="text-white")= item
+          .search.px-3.d-none.d-lg-block
+            i(class="fa-solid fa-magnifying-glass")
+          a(class="btn main-btn btn-primary rounded-pill" href="#") Login
+    // end navbar
+    // start landing page
+    .landing.d-flex.justify-content-center.align-items-center
+      div.text-center.text-light
+        h1(class=" display-4") Taste The Creativity
+        p(class="fs-6 text-white-50 mb-4") We Make Awesome Designs And We Create Excited Templates
+        a(class="btn main-btn btn-primary rounded-pill text-capitalize" href="#") Get Started
+    // end landing page
+    // start Features Section
+    section.features.text-center.sec-padding
+      div.container
+        div.main-title.mb-5
+          |
+          img(src="./imgs/title.png" alt="title" class="mb-3" )/
+          h2(class="mt-3 mb-2 fw-bold") We Are Good At
+          p.text-black-50.text-uppercase We Introduce New Features For You
+        div.features-content.mt-4
+          div.row
+            - var arr = [{title: "Graphic Design", icon: "fa-solid fa-pencil", desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},{title: "App Design", icon:"fa-brands fa-apple", desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking  it has a more-or-less normal distribution"}, {title: "Web Design", icon: "fa-solid fa-laptop", desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"}]
+            each ele in arr 
+              div.col-xl-4.col-md-6.mb-xl-0.mb-4
+                div.item 
+                  i(class=ele.icon class="fa-5x")
+                  h2.my-3= ele.title
+                  p.text-black-50.lh-lg= ele.desc
+    // end Features Section
+    // start Portfolio Section
+    section.portfolio.sec-padding.text-center
+      .container
+        div.main-title.mb-5.text-center
+          |
+          img(src="./imgs/title.png" alt="title" class="mb-3" )/
+          h2(class="mt-3 mb-2 fw-bold") We Make This
+          p.text-black-50.text-uppercase Our Portfolio Introduce New Works For You
+        ul.work-list.list-unstyled.d-flex.justify-content-center.gap-3.my-5.flex-wrap
+          - var arrWorks = ["All","Design", "Code", "Apps", "Templates"]
+            each el in arrWorks
+              if el.indexOf("All") !== -1
+                li(class="active btn btn-primary")= el
+              else 
+                li(class="btn btn-danger")= el
+        - var arrImgs = [{src: "./imgs/work-01.jpg", title: "Work 1"}, {src: "./imgs/work-02.jpg", title: "Work 2"}, {src: "./imgs/work-03.jpg", title: "Work 3"}, {src:"./imgs/work-04.jpg", title: "Work 4"}, {src:"./imgs/work-05.jpg", title: "Work 5"}, {src:"./imgs/work-06.jpg", title: "Work 6"}, {src:"./imgs/work-07.jpg", title: "Work 7"}, {src:"./imgs/work-08.jpg", title: "Work 8"}]
+        div.Works
+          div.row
+            each el in arrImgs
+              div.col-xl-3.col-md-6
+                div.work.mb-4.bg-white.position-relative
+                  img(src=el.src alt="work" class=" img-fluid")
+                  div.info.position-absolute
+                    div.position-absolute
+                      h4(class="mb-3")= el.title
+                      a(href="#" class="btn btn-primary") More Details
+        div.d-flex.justify-content-center.mt-4
+          a(href="#" class="btn btn-primary text-uppercase") I Want More 
+    // end Portfolio Section
+    // start Stuff Section
+    section.stuff.pt-5
+      .container
+        div.main-title.mb-5.text-center
+          |
+          img(src="./imgs/title.png" alt="title" class="mb-3" )/
+          h2(class="mt-3 mb-2 fw-bold") Some Stuff About Us
+          p.text-black-50.text-uppercase Our Stuff Introduce New iInfo For You
+        p(class="text-black-50 mt-3 mb-5 lh-lg w-75 mx-auto text-center").
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum
+        div.stuff-content
+          div.row.align-items-center
+            div.col-xl-5.text-center.mb-xl-0.mb-4.text-xl-start
+              h1.mb-4.fw-normal Retina Design
+              p.text-black-50.lh-lg.mb-3.fs-6.
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text
+              p.text-black-50.lh-lg.mb-3.fs-6.
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum
+              a(href="#" class="btn btn-danger mt-2 rounded-pill px-4") Join To My Stuff
+            div.col-xl-7.text-center
+              img(src="./imgs/laptop.png" class="img-fluid" alt="laptop")
+    // end Stuff Section
+    // start our-team section
+    section.our-team.sec-padding.text-center
+      .container
+        h1.mb-3.fw-bold Meet The Team
+        p.text-black-50.lh-lg.mb-5.
+          It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        .row
+          - var arrTeam = [{title: "Ahmed Magdy", src: "./imgs/team-1.png"}, {title: "Sayed Ali", src: "./imgs/team-2.png"}, {title: "Haitham Abdo", src: "./imgs/team-3.png"}, {title: "Abdallah Rashed", src: "./imgs/team-4.png"}]
+            each el in arrTeam
+              div.col-xl-3.col-md-6
+                div.item.mb-4.bg-white
+                  img(src=el.src class="img-fluid" alt="team")
+                  h4(class="bg-info p-3 text-white my-4")= el.title
+                  p.lh-lg.text-black-50.p-3.
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
+    // end our-team section
+    // start techs section
+    section.techs.py-5.text-center
+      .container
+        .row.align-items-center
+          - var techsImgs = ["./imgs/tech-1.png", "./imgs/tech-2.png", "./imgs/tech-3.png", "./imgs/tech-4.png"]
+            each el in techsImgs
+              .col-xl-3.col-md-6.mb-4
+                img(src=el alt="tech" class="img-fluid")
+    // end techs section
+    // start project section
+    section.project.text-center.sec-padding.text-light
+      .container 
+        h2 Start Your Project
+        p.lh-lg.my-4.text-white-50 Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        a(href="#" class="btn btn-danger px-5") Start Project
+    // end project section
+    // Start Blog section
+    section.Blog.sec-padding.tex-center
+      .container
+        div.main-title.mb-5.text-center
+          |
+          img(src="./imgs/title.png" alt="title" class="mb-3" )/
+          h2(class="mt-3 mb-2 fw-bold") Read Our Blogs
+          p.text-black-50.text-uppercase New Stories
+        .row.mb-5
+          - var arrBlog = [{title: "January, 13, 2020", src: "./imgs/blog-1.jpg"}, {title: "October, 20, 2018", src: "./imgs/blog-2.jpg"}, {title: "March, 14, 2019", src: "./imgs/blog-3.jpg"}]
+          each el in arrBlog
+            div.col-xl-4.col-md-6
+              div.card.mb-4.mb-xl-0.rounded-3
+                img(src=el.src class="img-fluid card-img-top" alt="blog")
+                h5.card-title.text-black-50.fs-6.p-3= el.title
+                h4.px-3.pb-3 Some Awesome Big Title Here
+                a(href="#" class="btn btn-primary m-3 mt-0") More Details
+        a(href="#" class="btn btn-danger mt-5 w-25 mx-auto d-block px-3") More Stories
+    // end Blog section
+    // start subscribe section
+    section.subscribe.sec-padding.text-center.text-lg-start
+      .container
+        form.row.align-items-center
+          .col-md-6.col-lg-3.mb-5.mb-md-0
+            div(class="fw-bold fs-5 news") Subscribe To Our Newsletter
+          .col-md-6.col-lg-7.mb-5.mb-md-0
+            input(type="email" placeholder="Enter Your Email Address" class="w-100 bg-transparent p-2 text-light")
+          .col-md-6.col-lg-2.mt-md-4.mt-lg-0
+            button(type="submit" class="btn rounded-pill") Subscribe
+    // end subscribe section
+    // start footer section
+    footer.sec-padding.text-center.text-lg-start.text-white-50
+      .container
+        .row
+          .col-xl-4.col-md-6.mb-4.mb-xl-0
+            .info
+              img(src="./imgs/logo.png" alt="logo" class="mb-4")
+              p.mb-4.lh-lg Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+              .copyright.lh-lg Created By #[span Graphberry ], All Copyrights &copy; Is reserved in 2022 - #[span Bondi Inc]
+          .col-xl-2.col-md-6.mb-4.mb-xl-0 
+            .links
+              h4.text-light.mb-4 Links 
+              ul.list-unstyled.lh-lg
+                - var arrLinks = ["Home", "Our Services", "Portfolio", "Testimonials", "Support", "Terms And Conditions"]
+                each el in arrLinks
+                  li= el
+          .col-xl-2.col-md-6.mb-4.mb-xl-0 
+            .links
+              h4.text-light.mb-4 About Us 
+              ul.list-unstyled.lh-lg
+                - var arrLinks2 = ["Sign In", "Register", "About Us", "Blog", "Contact Us"]
+                each el in arrLinks2
+                  li= el
+          .col-md-6.col-xl-4.mb-4.mb-xl-0
+            .contact
+              h4.text-light.mb-4 Contact Us
+              p.lh-lg.mb-4 Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.
+              a(href="#" class="btn btn-danger d-block w-100 rounded-pill mb-4" style={color: "#ffc400"}) graphberry@gmail.com
+              ul.icons.d-flex.gap-3.list-unstyled.flex-wrap.justify-content-center.w-100
+                - var arrIcons = [{title: "facebook", icon: "fa-facebook"}, {title: "twitter", icon: "fa-twitter"}, {title: "linkedin", icon: "fa-linkedin"}, {title: "youtube", icon: "fa-youtube"}]
+                each ele in arrIcons
+                  li 
+                    a(href="#" class="d-block text-light")
+                      i(class="fa-brands fa-lg rounded-circle p-2", class=`${ele.icon} ${ele.title}`)
+    // end footer section
+
+    script(src="./js/bootstrap.bundle.js")
+    script(src="./js/all.min.js")

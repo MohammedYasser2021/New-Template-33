@@ -1,0 +1,180 @@
+@import '../sass/_variables';
+*{
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* start global styles */
+.sec-padding{
+    padding-top: $secPadding;
+    padding-bottom: $secPadding;
+}
+.main-title{
+    h2{
+        color: $darkColor;
+    }
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        background-color: $greenColor;
+        transition: 0.3s ease-in-out;
+    }
+    &:hover::after{
+        width: 200px;
+    }
+}
+
+/* End global styles */
+/* start Navbar */
+.navbar{
+    background-color: $darkColor !important;
+    .navbar-nav{
+        .nav-link{
+            &.active, &:focus, &:hover{
+                color: $greenColor !important
+            }
+        }
+    }
+    .search{
+        border-left: 1px solid $greenColor ;
+        svg{
+            color: $greenColor !important ;
+        }
+    }
+    .navbar-toggler[aria-expanded = "true"]{
+        color: $greenColor !important
+    }
+}
+/* End Navbar */
+/* Start Landing Page */
+.landing{
+    background-color: $darkColor;
+    min-height: calc(100vh - 72px);
+}
+/* End Landing Page */
+/* start features section */
+.features{
+    .features-content{
+        .item{
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            padding: 50px;
+            svg{
+                color: $greenColor;
+            }
+            h2{
+                color: $yellowColor
+            }
+        }
+    }
+}
+/* End features section */
+/* start portfolio section */
+.portfolio{
+    background-color: $secColor;
+    .work{
+        padding: 5px;
+        .info{
+          overflow: hidden;
+          top: 5px;
+          left: 5px;
+          background-color: $greenColor;
+          z-index: 44;
+          width: calc(100% - 10px);
+          height: 0;
+          transition: 0.3s ease-in-out;
+          div{
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+          }
+        }
+        &:hover{
+            .info{
+                height: calc(100% - 10px);
+            }
+        }
+    }
+}
+/* End portfolio section */
+/* start our team section */
+.our-team{
+    background-color: $secColor;
+    h1{
+        color: $yellowColor;
+    }
+}
+/* End our team section */
+/* Start Project section */
+.project{
+    background-color: $darkColor;
+}
+/* End Project section */
+/* start blog section */
+@media (max-width: 575px){
+    .Blog .btn-danger{
+        width: 75% !important
+    }
+}
+/* end blog section */
+/* start subscribe section */
+.subscribe{
+    background-color: $yellowColor;
+    .news{
+        margin: 0 !important;
+        padding: 0;
+        color: $darkColor
+    }
+    input[type="email"]{
+        border: none;
+        border-bottom: 1px solid white;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: white
+        }
+    }
+    button{
+        background-color: $darkColor;
+        color: $yellowColor;
+    }
+}
+/* end subscribe section */
+/* start Footer section */
+footer{
+    background-color: $darkColor;
+    .copyright{
+        & > span:nth-of-type(1) {
+            color: $greenColor
+        }
+        & > span:nth-of-type(2) {
+            color: $yellowColor
+        }
+    }
+    .contact {
+        svg{
+            width: 25px;
+            height: 25px;
+            &.facebook{
+                background-color: #1877f2;
+            }
+            &.twitter{
+                background-color: #1da1f2;
+            }
+            &.linkedin{
+                background-color: #0077b5;
+            }
+            &.youtube{
+                background-color: #ff0000;
+            }
+        }
+    }
+}
+/* end Footer section */

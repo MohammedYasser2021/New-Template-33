@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* start global styles */
+.sec-padding {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.main-title {
+  position: relative;
+}
+
+.main-title h2 {
+  color: #19283f;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 2px;
+  background-color: #33d1cc;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.main-title:hover::after {
+  width: 200px;
+}
+
+/* End global styles */
+/* start Navbar */
+.navbar {
+  background-color: #19283f !important;
+}
+
+.navbar .navbar-nav .nav-link.active, .navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover {
+  color: #33d1cc !important;
+}
+
+.navbar .search {
+  border-left: 1px solid #33d1cc;
+}
+
+.navbar .search svg {
+  color: #33d1cc !important;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  color: #33d1cc !important;
+}
+
+/* End Navbar */
+/* Start Landing Page */
+.landing {
+  background-color: #19283f;
+  min-height: calc(100vh - 72px);
+}
+
+/* End Landing Page */
+/* start features section */
+.features .features-content .item {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 50px;
+}
+
+.features .features-content .item svg {
+  color: #33d1cc;
+}
+
+.features .features-content .item h2 {
+  color: #ffc400;
+}
+
+/* End features section */
+/* start portfolio section */
+.portfolio {
+  background-color: #eff7fa;
+}
+
+.portfolio .work {
+  padding: 5px;
+}
+
+.portfolio .work .info {
+  overflow: hidden;
+  top: 5px;
+  left: 5px;
+  background-color: #33d1cc;
+  z-index: 44;
+  width: calc(100% - 10px);
+  height: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio .work .info div {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.portfolio .work:hover .info {
+  height: calc(100% - 10px);
+}
+
+/* End portfolio section */
+/* start our team section */
+.our-team {
+  background-color: #eff7fa;
+}
+
+.our-team h1 {
+  color: #ffc400;
+}
+
+/* End our team section */
+/* Start Project section */
+.project {
+  background-color: #19283f;
+}
+
+/* End Project section */
+/* start blog section */
+@media (max-width: 575px) {
+  .Blog .btn-danger {
+    width: 75% !important;
+  }
+}
+
+/* end blog section */
+/* start subscribe section */
+.subscribe {
+  background-color: #ffc400;
+}
+
+.subscribe .news {
+  margin: 0 !important;
+  padding: 0;
+  color: #19283f;
+}
+
+.subscribe input[type="email"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe input[type="email"]:focus {
+  outline: none;
+}
+
+.subscribe input[type="email"]::-webkit-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type="email"]:-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type="email"]::-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe input[type="email"]::placeholder {
+  color: white;
+}
+
+.subscribe button {
+  background-color: #19283f;
+  color: #ffc400;
+}
+
+/* end subscribe section */
+/* start Footer section */
+footer {
+  background-color: #19283f;
+}
+
+footer .copyright > span:nth-of-type(1) {
+  color: #33d1cc;
+}
+
+footer .copyright > span:nth-of-type(2) {
+  color: #ffc400;
+}
+
+footer .contact svg {
+  width: 25px;
+  height: 25px;
+}
+
+footer .contact svg.facebook {
+  background-color: #1877f2;
+}
+
+footer .contact svg.twitter {
+  background-color: #1da1f2;
+}
+
+footer .contact svg.linkedin {
+  background-color: #0077b5;
+}
+
+footer .contact svg.youtube {
+  background-color: #ff0000;
+}
+
+/* end Footer section */
+/*# sourceMappingURL=style.css.map */
